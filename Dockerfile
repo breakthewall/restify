@@ -2,8 +2,12 @@ ARG TOOL_NAME
 
 FROM brsynth/${TOOL_NAME}-rest
 
-RUN pip install rq
+# FLASK
+RUN pip install --upgrade pip
+RUN pip install flask flask-restful
 
+# REDIS
+RUN pip install rq
 RUN apt-get update
 RUN apt-get --quiet --yes install supervisor redis-server
 
