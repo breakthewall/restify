@@ -22,4 +22,4 @@ python:3 bash -c \
 && /home/run.sh -server_url http://${TOOL}-rest_${mode}:8888/REST"
 
 
-IMAGE_TAG=$mode docker-compose down -v
+MODE=$mode TOOL=$TOOL docker-compose down -v
