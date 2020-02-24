@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: ../Dockerfile
       args:
-        mode: ${TOOL}
+        TOOL_NAME: ${TOOL}
     env_file: ../.env
     restart: always
     volumes:
