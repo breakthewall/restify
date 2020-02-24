@@ -1,3 +1,15 @@
+# rp2paths-rest
+
+REST version of rp2paths. It can run flask or redis mode. Source code may be found at the following location: [GitHub](https://github.com/brsynth/restify).
+
+## Build image
+
+Compile the docker using the Dockerfile using the following command:
+
+```
+docker build --build-arg mode=[flask|redis] -t brsynth/rp2paths-rest:[flask|redis] -f dockerfile
+```
+
 # <tool>-rest
 
 REST version of <tool>. It can run flask or redis mode. Source code may be found at the following location: [GitHub](https://github.com/brsynth/restify).
