@@ -1,6 +1,6 @@
-ARG tool
+ARG TOOL
 
-FROM brsynth/${tool}-rest
+FROM brsynth/${TOOL}-rest
 
 RUN pip install rq
 
