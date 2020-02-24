@@ -17,7 +17,7 @@ WORKDIR /REST
 #COPY src /REST/
 
 #ENTRYPOINT ["python3"]
-CMD ["sh", "-c", "python3", "/REST/Main.py","${REST_MODE}"]
+ENTRYPOINT ["sh", "-c", "python3", "/REST/Main.py","${REST_MODE}"]
 
 # Open server port
 EXPOSE 8888
