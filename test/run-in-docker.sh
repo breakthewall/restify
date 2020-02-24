@@ -4,14 +4,14 @@
 #mode=$1
 mode=redis
 
-source ../tofill/.env
+source ../.env
 
 TOOL=$TOOL docker-compose up -d rest
 
 
 sleep 5
 
-source ../tofill/test/command
+source ../${TOOL}-rest/test/command
 
 docker run --rm \
   --link ${TOOL}_$mode:${TOOL}_$mode \
