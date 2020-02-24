@@ -4,4 +4,4 @@ mode=$1
 
 source .env
 
-docker build --build-arg mode=$mode -t brsynth/${TOOL}-rest:$mode .
+docker build --build-arg mode=$mode --build-arg TOOL=$TOOL -t brsynth/${TOOL}-rest:$mode .
