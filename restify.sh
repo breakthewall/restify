@@ -11,7 +11,7 @@ tool_name=${basename%.*}
 git clone $tool_url
 
 # Rename the current folder
-#mv "$PWD" "${PWD%/*}/${tool_name}-rest"
+mv "$PWD" "${PWD%/*}/${tool_name}-rest"
 
 echo "
 TOOL_TAG=master
@@ -32,6 +32,15 @@ Compile the docker using the Dockerfile using the following command:
 \`\`\`
 docker build --build-arg mode=[flask|redis] -t brsynth/$tool_name-rest:[flask|redis] -f dockerfile
 \`\`\`
-" > README.md
 
-cat _README.md >> README.md
+## Run
+
+\`\`\`
+MODE=[flask|redis] docker-compose up rest
+\`\`\`
+
+Then, to clean docker objects:
+\`\`\`
+MODE=[flask|redis] docker-compose down -v
+\`\`\`
+" > README.md
