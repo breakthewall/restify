@@ -5,7 +5,7 @@ mode=$1
 
 ../rest/run.sh $mode &
 
-sleep 10
+sleep 5
 
 pip install --upgrade pip
 pip install requests
