@@ -13,7 +13,7 @@ tool_rest_url=`echo $tool_url | sed 's|\(.*\)/.*|\1|'`
 git clone $tool_rest_url"/"$tool_name"-rest.git"
 
 # Rename the current folder
-mv "$PWD" "${PWD%/*}/${tool_name}-rest"
+#mv "$PWD" "${PWD%/*}/${tool_name}-rest"
 
 echo "
 TOOL_TAG=master
@@ -22,7 +22,7 @@ IMAGE_TAG=redis
 COMMAND=\"python3 ../${tool_name}-rest/test/RestQuery.py -file_1 input/<filename> -param_1 <param_1>\"
 TOOL="$tool_name > .env
 
-./build-docker-image.sh redis
+#./build-docker-image.sh redis
 
 echo "# $tool_name-rest
 
