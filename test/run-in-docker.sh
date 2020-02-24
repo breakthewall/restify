@@ -13,7 +13,7 @@ sleep 5
 
 docker run --rm \
   --link ${TOOL}_$mode:${TOOL}_$mode \
-  -v $PWD../${TOOL}-rest/test:/home \
+  -v $PWD/../${TOOL}-rest/test:/home \
   -w /home \
   --net ${TOOL} \
 python:3 bash -c \
