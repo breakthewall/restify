@@ -22,4 +22,4 @@ python:3 bash -c \
 && `cat ../${TOOL}-rest/test/command.txt` -server_url http://${TOOL}-rest_${mode}:8888/REST"
 
 
-MODE=$mode TOOL=$TOOL docker-compose down -v
+MODE=$mode TOOL=$TOOL DIR="$PWD/.." docker-compose down -v
