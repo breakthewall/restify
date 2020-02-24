@@ -15,7 +15,7 @@ services:
     volumes:
       - $PWD/rest/src:/REST
       - $PWD/${TOOL}:/home/${TOOL}
-      - $PWD/${TOOL}-rest/app:/REST/app
+      - $PWD/${TOOL}-rest/src:/REST/app
 
 networks:
   default:
