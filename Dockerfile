@@ -16,7 +16,7 @@ WORKDIR /REST
 #COPY src /REST/
 
 ENTRYPOINT ["python3"]
-CMD ["/REST/Main.py","${MODE}"]
+CMD ["/REST/Main.py","redis"]
 
 # Open server port
 EXPOSE 8888
