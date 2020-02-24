@@ -10,12 +10,12 @@ services:
       dockerfile: ../Dockerfile
       args:
         mode: ${TOOL}
-    env_file: ../tofill/.env
+    env_file: ../.env
     restart: always
     volumes:
       - $PWD/../rest/src:/REST
       - $PWD/../${TOOL}:/home/${TOOL}
-      - $PWD/../src:/REST/app
+      - $PWD/../${TOOL}-rest/src:/REST/app
 
 networks:
   default:
