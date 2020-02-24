@@ -20,6 +20,7 @@ IMAGE_TAG=redis
 COMMAND=\"python3 ../tofill/test/RestQuery.py -file_1 input/<filename> -param_1 <param_1>\"
 TOOL="$tool_name > tofill/.env
 
+./build-docker-image.sh redis
 
 echo "# $tool_name-rest
 
@@ -30,7 +31,7 @@ REST version of $tool_name. It can run flask or redis mode. Source code may be f
 Compile the docker using the Dockerfile using the following command:
 
 \`\`\`
-docker build --build-arg mode=[flask|redis] -t brsynth/$tool_name-rest:[flask|redis] -f dockerfile
+docker build --build-arg mode=[flask|redis] -t brsynth/$tool_name-rest:[flask|redis] -f Dockerfile
 \`\`\`
 
 ## Run
