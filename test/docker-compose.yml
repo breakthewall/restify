@@ -10,7 +10,7 @@ services:
       dockerfile: ../Dockerfile
       args:
         mode: ${TOOL}
-    env_file: ../.env
+    env_file: ../tofill/.env
     restart: always
     volumes:
       - $PWD/../rest/src:/REST
