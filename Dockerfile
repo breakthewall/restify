@@ -1,5 +1,4 @@
 ARG TOOL_NAME
-ARG REST_MODE
 
 FROM brsynth/${TOOL_NAME}-rest
 
@@ -16,8 +15,8 @@ WORKDIR /REST
 
 #COPY src /REST/
 
-#ENTRYPOINT ["python3"]
-ENTRYPOINT ["sh", "-c", "python3", "/REST/Main.py","${REST_MODE}"]
+ENTRYPOINT ["python3"]
+CMD ["/REST/Main.py","${MODE}"]
 
 # Open server port
 EXPOSE 8888

@@ -10,7 +10,6 @@ services:
       dockerfile: Dockerfile
       args:
         TOOL_NAME: ${TOOL}
-        REST_MODE: ${MODE}
     env_file: .env
     restart: always
     volumes:
