@@ -11,8 +11,6 @@ TOOL=$TOOL docker-compose up -d rest
 
 sleep 5
 
-source ../${TOOL}-rest/test/command
-
 docker run --rm \
   --link ${TOOL}_$mode:${TOOL}_$mode \
   -v $PWD:$PWD \
