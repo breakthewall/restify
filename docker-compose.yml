@@ -1,0 +1,22 @@
+version: '2.4'
+
+services:
+
+  rest:
+    container_name: ${TOOL}-rest_${MODE}
+#    image: brsynth/${TOOL}-rest:${IMAGE_TAG}
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        mode: ${TOOL}
+    env_file: tofill/.env
+    restart: always
+    volumes:
+      - $PWD/rest/src:/REST
+      - $PWD/${TOOL}:/home/${TOOL}
+      - $PWD/tofill/app:/REST/app
+
+networks:
+  default:
+    name: ${TOOL}
