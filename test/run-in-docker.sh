@@ -19,7 +19,7 @@ docker run --rm \
 python:3 bash -c \
   "pip install --upgrade pip \
 && pip install requests \
-&& /home/run.sh http://${TOOL}-rest_${mode}:8888/REST"
+&& /home/run.sh -server_url http://${TOOL}-rest_${mode}:8888/REST"
 
 
 IMAGE_TAG=$mode docker-compose down -v
