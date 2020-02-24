@@ -6,7 +6,7 @@ mode=redis
 
 source ../tofill/.env
 
-MODE=$mode docker-compose up -d rest
+TOOL=$TOOL docker-compose up -d rest
 
 
 sleep 5
