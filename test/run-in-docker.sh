@@ -6,7 +6,7 @@ mode=redis
 
 source ../.env
 
-TOOL=$TOOL docker-compose up -d rest
+MODE=$mode TOOL=$TOOL docker-compose up -d rest
 
 
 sleep 5
