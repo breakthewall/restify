@@ -5,6 +5,6 @@ mode=redis
 
 source .env
 
-MODE=$mode TOOL_NAME=$TOOL docker-compose up --build rest
+MODE=$mode TOOL_NAME=$TOOL PATH=$PWD docker-compose up --build rest
 
-MODE=$mode TOOL_NAME=$TOOL docker-compose down -v
+MODE=$mode TOOL_NAME=$TOOL PATH=$PWD docker-compose down -v

@@ -13,9 +13,9 @@ services:
     env_file: .env
     restart: always
     volumes:
-      - $PWD/rest/src:/REST
-      - $PWD/${TOOL}:/home/${TOOL}
-      - $PWD/${TOOL}-rest/src:/REST/app
+      - ${PATH}/rest/src:/REST
+      - ${PATH}/${TOOL}:/home/${TOOL}
+      - ${PATH}/${TOOL}-rest/src:/REST/app
 
 networks:
   default:

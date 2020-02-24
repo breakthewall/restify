@@ -6,7 +6,7 @@ mode=redis
 
 source ../.env
 
-MODE=$mode TOOL=$TOOL docker-compose -f ../docker-compose.yml up --build -d rest
+MODE=$mode TOOL=$TOOL PATH="$PWD/.." docker-compose -f ../docker-compose.yml up --build -d rest
 
 
 sleep 5
