@@ -13,13 +13,13 @@ sleep 5
 
 docker run --rm \
   --link ${TOOL}_$mode:${TOOL}_$mode \
-  -v $PWD:$PWD \
-  -w $PWD \
+  -v $PWD../${TOOL}-rest/test:/home \
+  -w /home \
   --net ${TOOL} \
 python:3 bash -c \
   "pip install --upgrade pip \
 && pip install requests \
-&& ${COMMAND} http://${TOOL}-rest_${mode}:8888/REST"
+&& /home/run.sh http://${TOOL}-rest_${mode}:8888/REST"
 
 
 IMAGE_TAG=$mode docker-compose down -v

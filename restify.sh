@@ -19,7 +19,6 @@ echo "
 TOOL_TAG=master
 MODE=redis
 IMAGE_TAG=redis
-COMMAND=\"python3 ../${tool_name}-rest/test/RestQuery.py -file_1 input/<filename> -param_1 <param_1>\"
 TOOL="$tool_name > .env
 
 #./build-docker-image.sh redis
