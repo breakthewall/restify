@@ -42,7 +42,7 @@ A test environment can be set up. For that, please fill up two files:
 
 ### Prerequisites
 
-* Docker - [Install](https://docs.docker.com/v17.09/engine/installation/)
+* Docker - [Install](https://docs.docker.com/install/)
 
 ## Contributing
 
