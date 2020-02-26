@@ -14,13 +14,13 @@ sleep 5
 
 docker run --rm \
   --link ${TOOL}-$mode:${TOOL} \
-  -v $PWD/../tofill/test:/home \
+  -v $PWD/../test:/home \
   -w /home \
   --net ${TOOL} \
 python:3 bash -c \
   "pip install --upgrade pip \
 && pip install requests \
-&& python3 RestQuery.py `tr '\r\n' ' ' < ../tofill/test/args.txt` -server_url http://${TOOL}:8888/REST"
+&& python3 RestQuery.py `tr '\r\n' ' ' < ../test/args.txt` -server_url http://${TOOL}:8888/REST"
 
 
 #MODE=$mode TOOL=$TOOL DIR="$PWD/.." docker-compose down -v

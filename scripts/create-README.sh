@@ -9,7 +9,7 @@ REST version of $tool_name. It can run flask or redis mode. Source code may be f
 
 ## Customize
 
-The REST function has to be filled in the file [tofill/app/app.py](tofill/app/app.py).
+The REST function has to be filled in the file [app/app.py](app/app.py).
 
 ## Run
 
@@ -32,11 +32,11 @@ Then, the REST service is reachable under \`$tool_name-rest\`.
 
 A test environment can be set up. For that, please fill up two files:
 
-+ [command.txt](tofill/test/command.txt)
++ [command.txt](test/command.txt)
 
  Modify the default command with propers arguments (one per line).
 
-+ [RestQuery.py](tofill/test/RestQuery.py)
++ [RestQuery.py](test/RestQuery.py)
 
  Modify paramters according to the ones contained in \`command.txt\` file
 

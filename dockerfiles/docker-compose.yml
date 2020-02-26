@@ -16,7 +16,7 @@ services:
     volumes:
       - ${DIR}/rest/src:/REST
       - ${DIR}/${TOOL}:/home/${TOOL}
-      - ${DIR}/tofill/app:/REST/app
+      - ${DIR}/app:/REST/app
 
 
 networks:
