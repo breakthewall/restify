@@ -35,8 +35,11 @@ Version 1.0
 Please cite:
 
 Joan Hérisson
+
 University of Evry/Paris-Saclay
+
 Genomics Metabolics Laboratory, LiSSB
+
 J.-L. Faulon's group
 
 ### Licence
