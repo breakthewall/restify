@@ -20,8 +20,6 @@ git submodule add $tool_url
 
 echo "
 TOOL_TAG=master
-MODE=redis
-IMAGE_TAG=redis
 TOOL="$tool_name > .env
 
 #./build-docker-image.sh redis
@@ -30,11 +28,27 @@ echo "# $tool_name-rest
 
 REST version of $tool_name. It can run flask or redis mode. Source code may be found at the following location: [GitHub](https://github.com/brsynth/$tool_name-rest).
 
+## Customize
+
+The REST function has to be filled in the file (tofill/app/app.py)[tofill/app/app.py].
+
 ## Run
 
 \`\`\`
 ./run-in-docker.sh [flask|redis]
 \`\`\`
+
+## Link
+
+The REST service is running in a separated network ($tool_name). To make the communication possible between the REST service and another container, please add the following option to the other container docker run command:
+\`\`\`
+docker run ... --net $tool_name ...
+\`\`\`
+Then, the REST service is reachable under \`$tool_name-rest\`.
+
+
+## Test
+
 
 ### Prerequisites
 
