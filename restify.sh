@@ -55,11 +55,11 @@ A test environment can be set up. For that, please fill up two files:
 
 + [command.txt](tofill/test/command.txt)
 
-...Modify the default command with propers arguments (one per line).
+ Modify the default command with propers arguments (one per line).
 
 + [RestQuery.py](tofill/test/RestQuery.py)
 
-...Modify paramters according to the ones contained in \`command.txt\` file
+ Modify paramters according to the ones contained in \`command.txt\` file
 
 ### Prerequisites
 
