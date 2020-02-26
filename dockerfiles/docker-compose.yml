@@ -2,14 +2,13 @@ version: '2.4'
 
 services:
 
-  rest:
-    container_name: ${TOOL}-rest
+  flask:
+    container_name: ${TOOL}-flask
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: flask.Dockerfile
       args:
         TOOL_NAME: ${TOOL}
-        REST_MODE: "redis"
     env_file: .env
     restart: always
     volumes:

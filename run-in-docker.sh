@@ -2,6 +2,6 @@
 
 mode=$1
 
-MODE=$mode DIR=$PWD docker-compose up --build rest
+DIR=$PWD docker-compose -f dockerfiles/docker-compose.yml up $mode
 
-MODE=$mode DIR=$PWD docker-compose down -v
+DIR=$PWD docker-compose -f dockerfiles/docker-compose.yml down -v

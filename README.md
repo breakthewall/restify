@@ -6,7 +6,7 @@ Tool to make a simple program a REST service (flask or redis). Source code may b
 
 To make a simple program a REST service, an online GIT repository has to host the program source code. Then, please type the following command:
 ```
-./restify.sh <program_url>
+./restify.sh <program_url> <branch>
 ```
 
 ## Run the program in REST mode
