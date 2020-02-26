@@ -3,6 +3,7 @@ version: '2.4'
 services:
 
   flask:
+    image: ${TOOL}-rest:flask
     container_name: ${TOOL}-flask
     build:
       context: .
@@ -17,6 +18,7 @@ services:
       - $PWD/tofill/app:/REST/app
 
   redis:
+    image: ${TOOL}-rest:redis
     container_name: ${TOOL}-redis
     build:
       context: .
