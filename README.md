@@ -18,10 +18,8 @@ To make a simple program a REST service, an online GIT repository has to host th
 ### Prerequisites
 
 * Docker - [Install](https://docs.docker.com/install/)
+* Tool to restify - Dockerfile
 
-## Contributing
-
-TODO
 
 ## Versioning
 
