@@ -2,8 +2,6 @@
 
 mode=$1
 
-source .env
+MODE=$mode DIR=$PWD docker-compose up --build rest
 
-MODE=$mode TOOL_NAME=$TOOL DIR=$PWD docker-compose up --build rest
-
-MODE=$mode TOOL_NAME=$TOOL DIR=$PWD docker-compose down -v
+MODE=$mode DIR=$PWD docker-compose down -v
