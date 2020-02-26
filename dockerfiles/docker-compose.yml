@@ -4,35 +4,19 @@ services:
 
   rest:
     image: ${TOOL}-rest
-    container_name: ${TOOL}-rest
-    restart: always
     build:
       context: .
       dockerfile: Dockerfile
       args:
         TOOL_NAME: ${TOOL}
+    container_name: ${TOOL}-${MODE}
+    restart: always
     environment:
       - REST_MODE=${MODE}
     volumes:
       - $PWD/rest/src:/REST
       - $PWD/${TOOL}:/home/${TOOL}
       - $PWD/tofill/app:/REST/app
-
-#   redis:
-#     image: ${TOOL}-rest:redis
-#     container_name: ${TOOL}-redis
-#     build:
-#       context: .
-#       dockerfile: Dockerfile
-#       args:
-#         TOOL_NAME: ${TOOL}
-#         REST_MODE: "redis"
-# #    env_file: redis.env
-#     restart: always
-#     volumes:
-#       - $PWD/rest/src:/REST
-#       - $PWD/${TOOL}:/home/${TOOL}
-#       - $PWD/tofill/app:/REST/app
 
 
 networks:
