@@ -24,4 +24,4 @@ python:3 bash -c \
 
 
 #MODE=$mode TOOL=$TOOL DIR="$PWD/.." docker-compose down -v
-MODE=$mode docker-compose -f ../dockerfiles/docker-compose.yml down -v
+MODE=$mode DIR="$PWD/.." docker-compose -f ../dockerfiles/docker-compose.yml down -v
