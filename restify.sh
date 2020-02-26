@@ -63,11 +63,12 @@ Version 1.0
 ## References
 <a id="1">[1]</a>
 Joan Hérisson (2020).
+[restify tool](git@github.com:brsynth/restify.git)
 University of Evry/Paris-Saclay.
 Genomics Metabolics Laboratory, LiSSB, J.-L. Faulon's group.
 
 ## License
+$tool_name is released under the MIT licence.
 
-[MIT]
 # $tool_name-rest
 " > README.md
