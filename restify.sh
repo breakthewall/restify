@@ -28,7 +28,7 @@ TOOL="$tool_name > .env
 
 echo "# $tool_name-rest
 
-REST version of $tool_name. It can run flask or redis mode. Source code may be found at the following location: [GitHub](https://github.com/brsynth/restify).
+REST version of $tool_name. It can run flask or redis mode. Source code may be found at the following location: [GitHub](https://github.com/brsynth/$tool_name-rest).
 
 ## Build image
 
@@ -41,11 +41,33 @@ docker build --build-arg mode=[flask|redis] -t brsynth/$tool_name-rest:[flask|re
 ## Run
 
 \`\`\`
-MODE=[flask|redis] docker-compose up rest
+./run-in-docker.sh [flask|redis]
 \`\`\`
 
-Then, to clean docker objects:
-\`\`\`
-MODE=[flask|redis] docker-compose down -v
-\`\`\`
+### Prerequisites
+
+* Docker - [Install](https://docs.docker.com/v17.09/engine/installation/)
+
+## Contributing
+
+TODO
+
+## Versioning
+
+Version 1.0
+
+## Authors
+
+* ****
+
+## References
+<a id="1">[1]</a>
+Joan Hérisson (2020).
+University of Evry/Paris-Saclay.
+Genomics Metabolics Laboratory, LiSSB, J.-L. Faulon's group.
+
+## License
+
+[MIT]
+# $tool_name-rest
 " > README.md

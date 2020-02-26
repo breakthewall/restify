@@ -1,25 +1,18 @@
-# <tool>-rest
+# Restify
 
-REST version of <tool>. It can run flask or redis mode. Source code may be found at the following location: [GitHub](https://github.com/brsynth/restify).
+Tool to make a simple program a REST service (flask or redis). Source code may be found at the following location: [GitHub](https://github.com/brsynth/restify).
 
-## Build image
+## Restify the program
 
-Compile the docker using the Dockerfile using the following command:
-
+To make a simple program a REST service, an online repository has to host the program source code. Then, please type the following command:
 ```
-docker build --build-arg mode=[flask|redis] -t brsynth/<tool>-rest:[flask|redis] -f dockerfile
-```
-
-
-## Run
-
-```
-MODE=[flask|redis] docker-compose up rest
+./restify.sh <program_url>
 ```
 
-Then, to clean docker objects:
+## Run the program in REST mode
+
 ```
-MODE=[flask|redis] docker-compose down -v
+./run-in-docker.sh [flask|redis]
 ```
 
 ### Prerequisites
@@ -36,10 +29,18 @@ Version 1.0
 
 ## Authors
 
-* **Melchior du Lac**
-* Joan Hérisson
+* **Joan Hérisson**
 
-## License
+### How to cite Restify?
+Please cite:
 
-[MIT](https://github.com/brsynth/rp2paths/blob/master/LICENSE.txt)
+Joan Hérisson
+University of Evry/Paris-Saclay
+Genomics Metabolics Laboratory, LiSSB
+J.-L. Faulon's group
+
+### Licence
+Restify is released under the MIT licence. See the [LICENCE.txt](https://github.com/brsynth/restify/blob/master/LICENSE.txt) file for details.
+
+
 # restify
