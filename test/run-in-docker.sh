@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # 'flask' or 'redis'
-#mode=$1
-mode=redis
+mode=$1
 
-source ../.env
+source .env
 
-MODE=$mode TOOL=$TOOL DIR="$PWD/.." docker-compose -f ../docker-compose.yml up --build -d rest
+#MODE=$mode TOOL=$TOOL DIR="$PWD/.." docker-compose -f ../docker-compose.yml up --build -d rest
+MODE=$mode docker-compose -f ../dockerfiles/docker-compose.yml up
+
 
 
 sleep 5
@@ -22,4 +23,5 @@ python:3 bash -c \
 && python3 RestQuery.py `tr -d '\n' < ../tofill/test/args.txt` -server_url http://${TOOL}-rest_${mode}:8888/REST"
 
 
-MODE=$mode TOOL=$TOOL DIR="$PWD/.." docker-compose down -v
+#MODE=$mode TOOL=$TOOL DIR="$PWD/.." docker-compose down -v
+MODE=$mode docker-compose -f ../dockerfiles/docker-compose.yml down -v
