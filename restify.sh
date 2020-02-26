@@ -26,7 +26,9 @@ print "Create .env files"
 
 
 # Build images instanciated in the docker-compose file
-print "Build images"
+print "Build tool image ($tool_name)"
+docker build -f $tool_name/Dockerfile -t $tool_name .
+print "Build REST images"
 TOOL=$tool_name docker-compose -f dockerfiles/docker-compose.yml build
 
 # Create README.md

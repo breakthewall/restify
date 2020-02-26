@@ -24,7 +24,7 @@ services:
       context: .
       dockerfile: redis.Dockerfile
       args:
-        DIR_NAME: ${DIR}
+        TOOL_NAME: ${TOOL}
     env_file: redis.env
     restart: always
     volumes:

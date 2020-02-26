@@ -1,6 +1,6 @@
 ARG TOOL_NAME
 
-FROM brsynth/${TOOL_NAME}-rest
+FROM ${TOOL_NAME}
 
 # FLASK
 RUN pip install --upgrade pip
