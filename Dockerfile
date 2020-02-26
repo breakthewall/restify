@@ -1,4 +1,5 @@
 ARG TOOL_NAME
+ARG REST_MODE
 
 FROM brsynth/${TOOL_NAME}-rest
 
@@ -12,8 +13,6 @@ RUN apt-get update
 RUN apt-get --quiet --yes install supervisor redis-server
 
 WORKDIR /REST
-
-#COPY src /REST/
 
 ENTRYPOINT ["python3"]
 CMD ["/REST/Main.py","redis"]
