@@ -41,6 +41,3 @@ J.-L. Faulon's group
 
 ### Licence
 Restify is released under the MIT licence. See the [LICENCE.txt](https://github.com/brsynth/restify/blob/master/LICENSE.txt) file for details.
-
-
-# restify

@@ -78,7 +78,7 @@ Version 1.0
 * ****
 
 ## References
-<a id=\"1\">[1]</a>
+[1]
 Joan Hérisson (2020).
 [restify tool](git@github.com:brsynth/restify.git)
 University of Evry/Paris-Saclay.
@@ -87,5 +87,4 @@ Genomics Metabolics Laboratory, LiSSB, J.-L. Faulon's group.
 ## License
 $tool_name-rest is released under the MIT licence.
 
-# $tool_name-rest
 " > README.md
