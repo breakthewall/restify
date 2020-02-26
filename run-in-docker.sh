@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#mode=$1
-mode=redis
+mode=$1
 
 source .env
 
