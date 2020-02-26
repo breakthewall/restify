@@ -2,37 +2,37 @@ version: '2.4'
 
 services:
 
-  flask:
-    image: ${TOOL}-rest:flask
-    container_name: ${TOOL}-flask
+  rest:
+    image: ${TOOL}-rest:${MODE}
+    container_name: ${TOOL}-${MODE}
     build:
       context: .
       dockerfile: Dockerfile
       args:
         TOOL_NAME: ${TOOL}
-        REST_MODE: "flask"
-    env_file: flask.env
+        REST_MODE: ${MODE}
+#    env_file: flask.env
     restart: always
     volumes:
       - $PWD/rest/src:/REST
       - $PWD/${TOOL}:/home/${TOOL}
       - $PWD/tofill/app:/REST/app
 
-  redis:
-    image: ${TOOL}-rest:redis
-    container_name: ${TOOL}-redis
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        TOOL_NAME: ${TOOL}
-        REST_MODE: "redis"
-    env_file: redis.env
-    restart: always
-    volumes:
-      - $PWD/rest/src:/REST
-      - $PWD/${TOOL}:/home/${TOOL}
-      - $PWD/tofill/app:/REST/app
+#   redis:
+#     image: ${TOOL}-rest:redis
+#     container_name: ${TOOL}-redis
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#       args:
+#         TOOL_NAME: ${TOOL}
+#         REST_MODE: "redis"
+# #    env_file: redis.env
+#     restart: always
+#     volumes:
+#       - $PWD/rest/src:/REST
+#       - $PWD/${TOOL}:/home/${TOOL}
+#       - $PWD/tofill/app:/REST/app
 
 
 networks:
