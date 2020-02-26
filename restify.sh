@@ -27,7 +27,7 @@ print "Create .env files"
 
 # Build images instanciated in the docker-compose file
 print "Build images"
-DIR=$PWD docker-compose -f dockerfiles/docker-compose.yml build
+DIR=`basename $PWD` TOOL=$tool_name docker-compose -f dockerfiles/docker-compose.yml build
 
 # Create README.md
 print "Create README.md"

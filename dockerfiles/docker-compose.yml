@@ -3,18 +3,18 @@ version: '2.4'
 services:
 
   flask:
-    env_file: flask.env
     container_name: ${TOOL}-flask
     build:
       context: .
       dockerfile: flask.Dockerfile
       args:
         TOOL_NAME: ${TOOL}
+    env_file: flask.env
     restart: always
     volumes:
-      - ${DIR}/rest/src:/REST
-      - ${DIR}/${TOOL}:/home/${TOOL}
-      - ${DIR}/tofill/app:/REST/app
+      - $PWD/rest/src:/REST
+      - $PWD/${TOOL}:/home/${TOOL}
+      - $PWD/tofill/app:/REST/app
 
   redis:
     container_name: ${TOOL}-redis
@@ -26,9 +26,9 @@ services:
     env_file: redis.env
     restart: always
     volumes:
-      - ${DIR}/rest/src:/REST
-      - ${DIR}/${TOOL}:/home/${TOOL}
-      - ${DIR}/tofill/app:/REST/app
+      - $PWD/rest/src:/REST
+      - $PWD/${TOOL}:/home/${TOOL}
+      - $PWD/tofill/app:/REST/app
 
 
 networks:
