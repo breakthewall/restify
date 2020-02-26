@@ -13,7 +13,7 @@ RUN apt-get --quiet --yes install supervisor redis-server
 
 WORKDIR /REST
 
-ENTRYPOINT ["python3", "/REST/Main.py", "$REST_MODE"]
+ENTRYPOINT ["python3", "/REST/Main.py", "\"$REST_MODE\""]
 
 # Open server port
 EXPOSE 8888
