@@ -7,7 +7,7 @@ services:
     container_name: ${TOOL}-flask
     build:
       context: .
-      dockerfile: flask.Dockerfile
+      dockerfile: Dockerfile
       args:
         TOOL_NAME: ${TOOL}
         REST_MODE: "flask"
@@ -23,7 +23,7 @@ services:
     container_name: ${TOOL}-redis
     build:
       context: .
-      dockerfile: flask.Dockerfile
+      dockerfile: Dockerfile
       args:
         TOOL_NAME: ${TOOL}
         REST_MODE: "redis"
