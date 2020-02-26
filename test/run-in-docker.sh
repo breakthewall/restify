@@ -6,7 +6,7 @@ mode=$1
 source .env
 
 #MODE=$mode TOOL=$TOOL DIR="$PWD/.." docker-compose -f ../docker-compose.yml up --build -d rest
-MODE=$mode DIR="$PWD/.." docker-compose -f ../dockerfiles/docker-compose.yml up
+MODE=$mode DIR="$PWD/.." docker-compose -f ../dockerfiles/docker-compose.yml -d up
 
 
 
