@@ -2,6 +2,11 @@
 
 Tool to make a simple program a REST service (flask or redis). Source code may be found at the following location: [GitHub](https://github.com/brsynth/restify).
 
+## Prerequisites
+
+* Docker - [Install](https://docs.docker.com/install/)
+* Tool to restify - Dockerfile
+
 ## Restify the program
 
 To make a simple program a REST service, an online GIT repository has to host the program source code. Then, please type the following command:
@@ -14,11 +19,6 @@ To make a simple program a REST service, an online GIT repository has to host th
 ```
 ./run-in-docker.sh [flask|redis]
 ```
-
-### Prerequisites
-
-* Docker - [Install](https://docs.docker.com/install/)
-* Tool to restify - Dockerfile
 
 
 ## Versioning
