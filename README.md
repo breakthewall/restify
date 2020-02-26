@@ -34,7 +34,7 @@ Version 1.0
 ### How to cite Restify?
 Please cite:
 
-Joan Hérisson, University of Evry/Paris-Saclay, Genomics Metabolics Laboratory, LiSSB ,J.-L. Faulon's group.
+Joan Hérisson, University of Evry/Paris-Saclay, Genomics Metabolics Laboratory, LiSSB , J.-L. Faulon's group.
 
 ### Licence
 Restify is released under the MIT licence. See the [LICENCE.txt](https://github.com/brsynth/restify/blob/master/LICENSE.txt) file for details.
