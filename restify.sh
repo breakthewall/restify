@@ -9,6 +9,8 @@ if [ "$branch" == "" ]; then
     branch="master"
 fi
 
+source scripts/functions
+
 # Clone REST part
 print "Clone REST part"
 git submodule add https://github.com/brsynth/rest.git
