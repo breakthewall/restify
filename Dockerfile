@@ -1,5 +1,6 @@
 ARG TOOL_NAME
 ARG REST_MODE
+ENV restmode=$REST_MODE
 
 FROM brsynth/${TOOL_NAME}-rest
 
@@ -15,7 +16,7 @@ RUN apt-get --quiet --yes install supervisor redis-server
 WORKDIR /REST
 
 #ENTRYPOINT ["python3"]
-CMD ["sh", "-c", "python3 /REST/Main.py $REST_MODE"]
+CMD ["sh", "-c", "python3 /REST/Main.py ${restmode}"]
 
 # Open server port
 EXPOSE 8888
