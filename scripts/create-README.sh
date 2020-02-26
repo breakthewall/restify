@@ -66,4 +66,4 @@ Genomics Metabolics Laboratory, LiSSB, J.-L. Faulon's group.
 ## License
 $tool_name-rest is released under the MIT licence.
 
-" > ../README.md
+" > README.md
