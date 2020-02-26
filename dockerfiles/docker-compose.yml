@@ -14,9 +14,9 @@ services:
     environment:
       - REST_MODE=${MODE}
     volumes:
-      - $PWD/rest/src:/REST
-      - $PWD/${TOOL}:/home/${TOOL}
-      - $PWD/tofill/app:/REST/app
+      - ${DIR}/rest/src:/REST
+      - ${DIR}/${TOOL}:/home/${TOOL}
+      - ${DIR}/tofill/app:/REST/app
 
 
 networks:
