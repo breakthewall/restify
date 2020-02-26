@@ -3,13 +3,13 @@ version: '2.4'
 services:
 
   rest:
-    container_name: ${TOOL}-rest_${MODE}
-#    image: brsynth/${TOOL}-rest:${IMAGE_TAG}
+    container_name: ${TOOL}-rest
     build:
       context: .
       dockerfile: Dockerfile
       args:
         TOOL_NAME: ${TOOL}
+        REST_MODE: ${MODE}
     env_file: .env
     restart: always
     volumes:
