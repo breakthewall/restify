@@ -7,9 +7,9 @@ TOOL_TAG=master
 TOOL="$tool_name > dockerfiles/.env
 
 # FLask
-cat dockerfiles/.env > flask.env
-echo "REST_MODE=flask" >> flask.env
+cat dockerfiles/.env > dockerfiles/flask.env
+echo "REST_MODE=flask" >> dockerfiles/flask.env
 
 # Redis
-cat dockerfiles/.env > redis.env
-echo "REST_MODE=redis" >> redis.env
+cat dockerfiles/.env > dockerfiles/redis.env
+echo "REST_MODE=redis" >> dockerfiles/redis.env
