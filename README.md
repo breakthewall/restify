@@ -5,7 +5,7 @@ Tool to make a simple program a REST service (flask or redis). Source code may b
 ## Prerequisites
 
 * Docker - [Install](https://docs.docker.com/install/)
-* Tool to restify - Dockerfile
+* Program to restify - Dockerfile
 
 ## Restify the program
 
