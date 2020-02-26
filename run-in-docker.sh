@@ -2,6 +2,6 @@
 
 mode=$1
 
-MODE=$mode TOOL="" docker-compose -f dockerfiles/docker-compose.yml up
+MODE=$mode docker-compose -f dockerfiles/docker-compose.yml up
 
-MODE=$mode TOOL="" docker-compose -f dockerfiles/docker-compose.yml down -v
+MODE=$mode docker-compose -f dockerfiles/docker-compose.yml down -v
