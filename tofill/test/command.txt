@@ -1,0 +1,1 @@
+python3 RestQuery.py -arg_1 <arg_1> -arg_2 <arg_2>

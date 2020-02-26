@@ -11,4 +11,4 @@ source ../.env
 
 pip install --upgrade pip
 pip install requests
-`cat ../${TOOL}-rest/test/command.txt` -server_url http://${TOOL_REST}_${mode}:8888/REST
+`cat ../tofill/test/command.txt` -server_url http://${TOOL_REST}_${mode}:8888/REST

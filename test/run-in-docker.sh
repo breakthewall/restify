@@ -13,13 +13,13 @@ sleep 5
 
 docker run --rm \
   --link ${TOOL}_$mode:${TOOL}_$mode \
-  -v $PWD/../${TOOL}-rest/test:/home \
+  -v $PWD/../tofill/test:/home \
   -w /home \
   --net ${TOOL} \
 python:3 bash -c \
   "pip install --upgrade pip \
 && pip install requests \
-&& `cat ../${TOOL}-rest/test/command.txt` -server_url http://${TOOL}-rest_${mode}:8888/REST"
+&& `cat ../tofill/test/command.txt` -server_url http://${TOOL}-rest_${mode}:8888/REST"
 
 
 MODE=$mode TOOL=$TOOL DIR="$PWD/.." docker-compose down -v
