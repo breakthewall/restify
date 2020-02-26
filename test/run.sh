@@ -11,4 +11,4 @@ source ../.env
 
 pip install --upgrade pip
 pip install requests
-`cat ../tofill/test/command.txt` -server_url http://${TOOL_REST}_${mode}:8888/REST
+python3 RestQuery.py `cat ../tofill/test/args.txt` -server_url http://${TOOL_REST}_${mode}:8888/REST

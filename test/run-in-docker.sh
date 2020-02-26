@@ -19,7 +19,7 @@ docker run --rm \
 python:3 bash -c \
   "pip install --upgrade pip \
 && pip install requests \
-&& `cat ../tofill/test/command.txt` -server_url http://${TOOL}-rest_${mode}:8888/REST"
+&& python3 RestQuery.py `cat ../tofill/test/args.txt` -server_url http://${TOOL}-rest_${mode}:8888/REST"
 
 
 MODE=$mode TOOL=$TOOL DIR="$PWD/.." docker-compose down -v
