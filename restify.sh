@@ -30,14 +30,6 @@ echo "# $tool_name-rest
 
 REST version of $tool_name. It can run flask or redis mode. Source code may be found at the following location: [GitHub](https://github.com/brsynth/$tool_name-rest).
 
-## Build image
-
-Compile the docker using the Dockerfile using the following command:
-
-\`\`\`
-docker build --build-arg mode=[flask|redis] -t brsynth/$tool_name-rest:[flask|redis] -f Dockerfile
-\`\`\`
-
 ## Run
 
 \`\`\`
