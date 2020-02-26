@@ -1,6 +1,6 @@
 ARG DIR_NAME
 
-FROM ${DIR_NAME}-rest:flask
+FROM ${DIR_NAME}_rest:flask
 
 # REDIS
 RUN pip install rq
