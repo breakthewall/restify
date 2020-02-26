@@ -3,13 +3,13 @@ version: '2.4'
 services:
 
   flask:
+    env_file: flask.env
     container_name: ${TOOL}-flask
     build:
       context: .
       dockerfile: flask.Dockerfile
       args:
         TOOL_NAME: ${TOOL}
-    env_file: flask.env
     restart: always
     volumes:
       - ${DIR}/rest/src:/REST
