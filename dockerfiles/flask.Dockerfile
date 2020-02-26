@@ -7,6 +7,11 @@ FROM ${TOOL_NAME}
 RUN pip install --upgrade pip
 RUN pip install flask flask-restful
 
+# REDIS
+RUN pip install rq
+RUN apt-get update
+RUN apt-get --quiet --yes install supervisor redis-server
+
 WORKDIR /REST
 
 #ENTRYPOINT ["python3", "/REST/Main.py"]

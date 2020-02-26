@@ -23,7 +23,7 @@ services:
     container_name: ${TOOL}-redis
     build:
       context: .
-      dockerfile: redis.Dockerfile
+      dockerfile: flask.Dockerfile
       args:
         TOOL_NAME: ${TOOL}
         REST_MODE: "redis"
