@@ -11,26 +11,26 @@ fi
 
 source scripts/functions
 
-# Clone REST part
-print "Clone REST part"
-git submodule add https://github.com/brsynth/rest.git
-# Clone tool part
-print "Clone tool part ($tool_name)"
-git submodule add $tool_url
-print "Put in the right branch ($branch)"
-git --git-dir=./rest/.git checkout $branch
+print "Build REST context"
+# Add submodule
+git submodule add https://github.com/brsynth/rest.git >/dev/null 2>&1
 
-# Create .env files
-print "Create .env files"
+print "Build tool context ($tool_name)"
+# Add submodule
+git submodule add $tool_url >/dev/null 2>&1
+# Put in the right branch
+git --git-dir=./rest/.git checkout $branch >/dev/null 2>&1
+# Create .env file
 ./scripts/create-env.sh $tool_name
-
-
-# Build images instanciated in the docker-compose file
-print "Build tool image ($tool_name)"
-docker build -f $tool_name/Dockerfile -t $tool_name .
-print "Build REST image"
-MODE="" TOOL=$tool_name docker-compose -f dockerfiles/docker-compose.yml build
+# Build image from Dockerfile file
+docker build -f $tool_name/Dockerfile -t $tool_name . >/dev/null 2>&1
+# Build image from docker-compose file
+MODE="" TOOL=$tool_name docker-compose -f dockerfiles/docker-compose.yml build >/dev/null 2>&1
 
 # Create README.md
 print "Create README.md"
 ./scripts/create-README.sh $tool_name
+
+print "Ready to run! "
+echo "     Please read README.md file for details."
+echo ""
