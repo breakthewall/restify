@@ -15,14 +15,12 @@ git submodule add https://github.com/brsynth/rest.git
 git submodule add $tool_url
 git --git-dir=./rest/.git checkout $branch
 
-# Create .env
+# Create .env files
 ./scripts/create-env.sh $tool_name
 
 
 # Build images instanciated in the docker-compose file
-MODE=flask DIR=$PWD docker-compose -f dockerfiles/docker-compose.yml build
-MODE=redis DIR=$PWD docker-compose -f dockerfiles/docker-compose.yml build
-
+DIR=$PWD docker-compose -f dockerfiles/docker-compose.yml build
 
 # Create README.md
 ./scripts/create-README.sh $tool_name
