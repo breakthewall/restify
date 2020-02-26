@@ -29,7 +29,7 @@ print "Create .env files"
 print "Build tool image ($tool_name)"
 docker build -f $tool_name/Dockerfile -t $tool_name .
 print "Build REST image"
-TOOL=$tool_name docker-compose -f dockerfiles/docker-compose.yml build
+MODE="" TOOL=$tool_name docker-compose -f dockerfiles/docker-compose.yml build
 
 # Create README.md
 print "Create README.md"
