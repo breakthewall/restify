@@ -1,5 +1,4 @@
 ARG TOOL_NAME
-ARG REST_MODE
 
 FROM ${TOOL_NAME}
 
@@ -14,9 +13,7 @@ RUN apt-get --quiet --yes install supervisor redis-server
 
 WORKDIR /REST
 
-#ENTRYPOINT ["python3", "/REST/Main.py"]
-#CMD ["flask"]
-ENTRYPOINT python3 Main.py ${REST_MODE}
+ENTRYPOINT ["python3", "/REST/Main.py", "$REST_MODE"]
 
 # Open server port
 EXPOSE 8888

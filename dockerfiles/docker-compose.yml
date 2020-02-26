@@ -3,16 +3,16 @@ version: '2.4'
 services:
 
   rest:
-    image: ${TOOL}-rest:${MODE}
-    container_name: ${TOOL}-${MODE}
+    image: ${TOOL}-rest
+    container_name: ${TOOL}-rest
+    restart: always
     build:
       context: .
       dockerfile: Dockerfile
       args:
         TOOL_NAME: ${TOOL}
-        REST_MODE: ${MODE}
-#    env_file: flask.env
-    restart: always
+    environment:
+      - REST_MODE=${MODE}
     volumes:
       - $PWD/rest/src:/REST
       - $PWD/${TOOL}:/home/${TOOL}
