@@ -1,8 +1,8 @@
 """
 Created on March 7 2019
 
-@author: Melchior du Lac
-@description: Run function of REST version of <tool>.
+@author: Melchior du Lac, Joan Hérisson
+@description: Run function of REST version of <tool>. The <tool> is available in /home/<tool>.
 
 """
 import subprocess
