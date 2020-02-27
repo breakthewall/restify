@@ -5,13 +5,15 @@ Tool to make a simple program a REST service (flask or redis). Source code may b
 ## Prerequisites
 
 * Docker - [Install](https://docs.docker.com/install/)
-* Program to restify - Dockerfile
+* Program to restify:
+ Dockerfile
+ Online GIT repository with at least a release
 
 ## Restify the program
 
-To make a simple program a REST service, an online GIT repository has to host the program source code. Then, please type the following command:
+To make a simple program a REST service, please type the following command:
 ```
-./restify.sh <program_url> <branch>
+./restify.sh <release_url>
 ```
 
 ## Run the program in REST mode

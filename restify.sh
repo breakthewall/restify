@@ -1,25 +1,19 @@
 #!/bin/bash
 
 tool_url=$1
-basename=$(basename $tool_url)
-tool_name=${basename%.*}
-
-branch=$2
-if [ "$branch" == "" ]; then
-    branch="master"
-fi
+# basename=$(basename $tool_url)
+# tool_name=${basename%.*}
+tool_name=`echo $tool_url | awk -F'/' '{print $5;}'`
 
 source scripts/functions
 
 print "Build REST context"
-# Add submodule
-git submodule add https://github.com/brsynth/rest.git >/dev/null 2>&1
+bash ./scripts/get_release.sh https://github.com/brsynth/rest/archive/v1.0.0.tar.gz rest
 
 print "Build tool context ($tool_name)"
-# Add submodule
-git submodule add $tool_url >/dev/null 2>&1
-# Put in the right branch
-git --git-dir=./rest/.git checkout $branch >/dev/null 2>&1
+bash ./scripts/get_release.sh $tool_url $tool_name
+
+
 # Create .env file
 ./scripts/create-env.sh $tool_name
 # Build image from Dockerfile file
