@@ -9,7 +9,7 @@ REST version of $tool_name. It can run flask or redis mode. Source code may be f
 
 ## Customize
 
-The REST function has to be filled in the file [app/app.py](app/app.py).
+The REST functions (\`run\` and \`post\`) has to be filled in file [app/app.py](app/app.py).
 
 ## Run
 
