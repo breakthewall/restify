@@ -11,7 +11,7 @@ import logging
 import resource
 import glob
 
-MAX_VIRTUAL_MEMORY = 20000 * 1024 * 1024 # 20GB -- define what is the best
+MAX_VIRTUAL_MEMORY = 2000 * 1024 * 1024 # 2GB -- define what is the best
 
 def limit_virtual_memory():
     resource.setrlimit(resource.RLIMIT_AS, (MAX_VIRTUAL_MEMORY, resource.RLIM_INFINITY))
@@ -36,6 +36,6 @@ def post():
     params = json.load(request.files['data'])
     args = {'bytes': file_1_bytes, 'param_1': params['param_1'], 'logger': None}
     result = run(args)
-    
+
     # Process result
     return 0
