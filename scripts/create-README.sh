@@ -32,7 +32,7 @@ Then, the REST service is reachable under \`$tool_name-rest\`.
 
 A test environment can be set up. For that, please fill up two files:
 
-+ [command.txt](test/command.txt)
++ [command.txt](test/args.txt)
 
  Modify the default command with propers arguments (one per line).
 
