@@ -1,6 +1,6 @@
 ARG TOOL_NAME
 
-FROM ${TOOL_NAME}
+FROM brsynth/${TOOL_NAME}-rest:flask
 
 # FLASK
 RUN pip install --upgrade pip
@@ -16,9 +16,9 @@ WORKDIR /REST
 RUN export LC_ALL=C.UTF-8 \
  && export LANG=C.UTF-8
 
-COPY supervisor.conf /
+COPY conf/supervisor.conf /CONF
 
-ENTRYPOINT supervisord -c /supervisor.conf & python3 /REST/Main.py "$REST_MODE"
+ENTRYPOINT supervisord -c /CONF/supervisor.conf & python3 /REST/Main.py "$REST_MODE"
 
 # Open server port
 EXPOSE 8888

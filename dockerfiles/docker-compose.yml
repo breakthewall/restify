@@ -3,10 +3,10 @@ version: '2.4'
 services:
 
   rest:
-    image: ${TOOL}-rest
+    image: brsynth/${TOOL}-rest:${MODE}
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: dockerfiles/${MODE}.dockerfile
       args:
         TOOL_NAME: ${TOOL}
     container_name: ${TOOL}-${MODE}
@@ -17,6 +17,7 @@ services:
       - ${DIR}/rest/src:/REST
       - ${DIR}/${TOOL}:/home/${TOOL}
       - ${DIR}/app:/REST/app
+      - ${DIR}/conf:/CONF
 
 
 networks:

@@ -24,8 +24,10 @@ git --git-dir=./rest/.git checkout $branch >/dev/null 2>&1
 ./scripts/create-env.sh $tool_name
 # Build image from Dockerfile file
 docker build -f $tool_name/Dockerfile -t $tool_name . >/dev/null 2>&1
-# Build image from docker-compose file
-MODE="" DIR="$PWD" TOOL=$tool_name docker-compose -f dockerfiles/docker-compose.yml build >/dev/null 2>&1
+# Build images from docker-compose file
+MODE="flask" DIR="$PWD" docker-compose -f dockerfiles/docker-compose.yml build >/dev/null 2>&1
+MODE="redis" DIR="$PWD" docker-compose -f dockerfiles/docker-compose.yml build >/dev/null 2>&1
+
 
 # Create README.md
 print "Create README.md"
@@ -34,3 +36,5 @@ print "Create README.md"
 print "Ready to run! "
 echo "     Please read README.md file for details."
 echo ""
+
+rm ./restify.sh
