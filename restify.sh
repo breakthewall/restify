@@ -6,7 +6,7 @@ tool_name=${basename%.*}
 
 branch=$2
 if [ "$branch" == "" ]; then
-    branch="master"
+    branch="stable"
 fi
 
 source scripts/functions
