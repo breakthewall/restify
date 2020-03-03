@@ -16,12 +16,12 @@ MAX_VIRTUAL_MEMORY = 2000 * 1024 * 1024 # 2GB -- define what is the best
 def limit_virtual_memory():
     resource.setrlimit(resource.RLIMIT_AS, (MAX_VIRTUAL_MEMORY, resource.RLIM_INFINITY))
 
-def run(params):
+def run(args):
 
-    file_1 = params['file_1']
-    param_1 = params['param_1']
+    file_1 = args['file_1']
+    param_1 = args['param_1']
 
-    if params['logger']==None:
+    if args['logger']==None:
         logging.basicConfig(level=logging.DEBUG)
         logger = logging.getLogger(__name__)
 
